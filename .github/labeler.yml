@@ -1,0 +1,107 @@
+# This YAML configuration file is used for labeling pull requests based on the changes made to files in the repository.
+#
+# Labels:
+# - 'root': Applied to any changes made to root files.
+# - 'AnyChange': Applied to any changes made within the entire repository.
+# - 'Actions': Applied to any changes made within the '.workflows' folder or its subfolders.
+# - 'GitHub': Applied to any changes made within the '.github' folder.
+# - 'Style': Applied to any changes made within the '.github/styles' folder.
+# - 'CSS': Applied to any changes made to files with the '.css' extension.
+# - 'JavaScript': Applied to any changes made to files with the '.js' extension.
+# - 'HTML': Applied to any changes made to files with the '.html' extension.
+# - 'PNG': Applied to any changes made to files with the '.png' extension.
+# - 'SVG': Applied to any changes made to files with the '.svg' extension.
+# - 'JPG': Applied to any changes made to files with the '.jpg' extension.
+# - 'GIF': Applied to any changes made to files with the '.gif' extension.
+# - 'JSON': Applied to any changes made to files with the '.json' extension.
+# - 'XML': Applied to any changes made to files with the '.xml' extension.
+# - 'Markdown': Applied to any changes made to files with the '.md' extension.
+# - 'YAML': Applied to any changes made to files with the '.yaml' extension.
+# - 'TypeScript': Applied to any changes made to files with the '.ts' extension.
+# - 'SCSS': Applied to any changes made to files with the '.scss' extension.
+# - 'feature': Applied to any PR where the head branch name starts with `feature` or has a `feature` section in the name.
+# - 'release': Applied to any PR that is opened against the `main` branch.
+# Add 'root' label to any root file changes
+# Quotation marks are required for the leading asterisk
+
+root:
+  - changed-files:
+      - any-glob-to-any-file: "*"
+
+# Add 'AnyChange' label to any changes within the entire repository
+AnyChange:
+  - changed-files:
+      - any-glob-to-any-file: "**"
+
+# Add 'Actions' label to any changes within '.workflows' folder or any subfolders
+Actions:
+  - changed-files:
+      - any-glob-to-any-file: .github/.workflows/**
+
+GitHub:
+  - changed-files:
+      - any-glob-to-any-file: .github/**
+
+Style:
+  - changed-files:
+      - any-glob-to-any-file: .github/styles/**
+
+CSS:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.css"
+
+JavaScript:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.js"
+
+HTML:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.html"
+
+PNG:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.png"
+
+SVG:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.svg"
+
+JPG:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.jpg"
+
+GIF:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.gif"
+
+JSON:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.json"
+
+XML:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.xml"
+
+Markdown:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.md"
+
+YAML:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.yaml"
+
+TypeScript:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.ts"
+
+SCSS:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.scss"
+
+# Add 'feature' label to any PR where the head branch name starts with `feature` or has a `feature` section in the name
+feature:
+  - head-branch: ["^feature", "feature"]
+
+# Add 'release' label to any PR that is opened against the `main` branch
+release:
+  - base-branch: "main"
