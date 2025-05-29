@@ -5,7 +5,7 @@
 * `identifier`: The unique identifier of the archive.org item where the file will be stored
 * `files`: The file or folder path inside the action's filesystem to upload
 
-### Supported Metadata Fields
+### Supported Metadata Fields Inputs
 
 * `adaptive_ocr`: Allows deriver to skip a page that would otherwise disrupt OCR
 * `aspect_ratio`: Ratio of the pixel width and height of a video stream (e.g. 4:3, 16:9)
