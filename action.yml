@@ -19,27 +19,219 @@ inputs:
   files:
     description: The file or folder path inside the action's filesystem to upload
     required: true
+  adaptive_ocr:
+    description: Allows deriver to skip a page that would otherwise disrupt OCR
+    required: false
+  aspect_ratio:
+    description: Ratio of the pixel width and height of a video stream (e.g. 4:3, 16:9)
+    required: false
+  betterpdf:
+    description: Indicates that the derive module should create a higher quality PDF derivative
+    required: false
+  bookreader-defaults:
+    description: Bookreader display mode (e.g. mode/1up, mode/2up, mode/thumb)
+    required: false
+  bwocr:
+    description: Allows deriver to OCR specific pages as B&W if color is causing failure
+    required: false
+  call_number:
+    description: Contributing library’s local call number
+    required: false
+  ccnum:
+    description: Closed Captioning Number
+    required: false
+  closed_captioning:
+    description: Indicates whether item contains closed captioning files (yes/no)
+    required: false
+  color:
+    description: Indicates whether media is in color or black and white
+    required: false
+  condition:
+    description: Condition of media (e.g. Good, Fair, Poor)
+    required: false
+  condition-visual:
+    description: Condition of artwork or printed materials
+    required: false
+  contributor:
+    description: Comma-separated list of contributors
+    required: false
+  coverage:
+    description: Comma-separated list of geographic or subject areas covered by item
+    required: false
+  creator:
+    description: Comma-separated list of creators
+    required: false
+  creator-alt-script:
+    description: Creator in alternate script
+    required: false
+  date:
+    description: Date of publication (YYYY, YYYY-MM, or YYYY-MM-DD)
+    required: false
+  description:
+    description: Describes the media stored in the item
+    required: false
+  external-identifier:
+    description: Comma-separated list of URLs or identifiers to outside resources
+    required: false
+  fixed-ppi:
+    description: To change the ppi to a specific resolution
+    required: false
+  isbn:
+    description: Comma-separated list of ISBN-10 or ISBN-13
+    required: false
+  issn:
+    description: Comma-separated list of ISSN identifiers
+    required: false
+  lccn:
+    description: Comma-separated list of Library of Congress Call Numbers
+    required: false
+  language:
+    description: Comma-separated list of languages
+    required: false
+  licenseurl:
+    description: URL of the copyright license
+    required: false
+  notes:
+    description: Additional notes about the item
+    required: false
+  oclc-id:
+    description: Comma-separated list of OCLC identifiers
+    required: false
+  openlibrary:
+    description: Deprecated. Open Library edition identifier
+    required: false
+  openlibrary_author:
+    description: Comma-separated list of Open Library authors
+    required: false
+  openlibrary_edition:
+    description: Open Library edition identifier
+    required: false
+  openlibrary_subject:
+    description: Comma-separated list of Open Library subjects
+    required: false
+  openlibrary_work:
+    description: Open Library work identifier
+    required: false
+  page-progression:
+    description: Determines direction pages will be “turned” in a book (lr/rl)
+    required: false
+  possible-copyright-status:
+    description: Information relevant to copyright status
+    required: false
+  ppi:
+    description: Pixels per inch
+    required: false
+  publisher:
+    description: Publisher of the media
+    required: false
+  related-external-id:
+    description: Comma-separated list of related external identifiers
+    required: false
+  rights:
+    description: Rights statement
+    required: false
+  scandate:
+    description: Date and time the media was captured
+    required: false
+  scanner:
+    description: Machinery used to digitize or collect the media
+    required: false
+  size:
+    description: Size of physical item digitized
+    required: false
+  sound:
+    description: Indicates whether media has sound or is silent
+    required: false
+  source:
+    description: Source of media
+    required: false
+  sponsor:
+    description: The person or organization that funded the digitization or collection
+    required: false
+  subject:
+    description: Comma-separated list of subjects/topics for the item
+    required: false
+  title:
+    description: The human-readable title for the item
+    required: false
+  title-alt-script:
+    description: Title in alternate script
+    required: false
+  volume:
+    description: Volume number or name
+    required: false
+  year:
+    description: Year of publication (deprecated, use date)
+    required: false
 
 runs:
   using: "composite"
   steps:
-    - id: setup-python
-      name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version:  3.9
+  - id: setup-python
+    name: Setup Python
+    uses: actions/setup-python@v4
+    with:
+      python-version: 3.9
 
-    - id: install-deps
-      name: Install Python dependencies
-      run: pip install internetarchive retry
-      shell: bash
+  - id: install-deps
+    name: Install Python dependencies
+    run: pip install internetarchive retry
+    shell: bash
 
-    - id: upload-files
-      name: Upload files
-      run: python ${{ github.action_path }}/upload.py
-      shell: bash
-      env:
-          access-key: ${{ inputs.access-key }}
-          secret-key: ${{ inputs.secret-key }}
-          identifier: ${{ inputs.identifier }}
-          files: ${{ inputs.files }}
+  - id: upload-files
+    name: Upload files
+    run: python ${{ github.action_path }}/upload.py
+    shell: bash
+    env:
+      access-key: ${{ inputs.access-key }}
+      secret-key: ${{ inputs.secret-key }}
+      identifier: ${{ inputs.identifier }}
+      files: ${{ inputs.files }}
+      adaptive_ocr: ${{ inputs.adaptive_ocr }}
+      aspect_ratio: ${{ inputs.aspect_ratio }}
+      betterpdf: ${{ inputs.betterpdf }}
+      bookreader-defaults: ${{ inputs.bookreader-defaults }}
+      bwocr: ${{ inputs.bwocr }}
+      call_number: ${{ inputs.call_number }}
+      ccnum: ${{ inputs.ccnum }}
+      closed_captioning: ${{ inputs.closed_captioning }}
+      color: ${{ inputs.color }}
+      condition: ${{ inputs.condition }}
+      condition-visual: ${{ inputs.condition-visual }}
+      contributor: ${{ inputs.contributor }}
+      coverage: ${{ inputs.coverage }}
+      creator: ${{ inputs.creator }}
+      creator-alt-script: ${{ inputs.creator-alt-script }}
+      date: ${{ inputs.date }}
+      description: ${{ inputs.description }}
+      external-identifier: ${{ inputs.external-identifier }}
+      fixed-ppi: ${{ inputs.fixed-ppi }}
+      isbn: ${{ inputs.isbn }}
+      issn: ${{ inputs.issn }}
+      lccn: ${{ inputs.lccn }}
+      language: ${{ inputs.language }}
+      licenseurl: ${{ inputs.licenseurl }}
+      notes: ${{ inputs.notes }}
+      oclc-id: ${{ inputs.oclc-id }}
+      openlibrary: ${{ inputs.openlibrary }}
+      openlibrary_author: ${{ inputs.openlibrary_author }}
+      openlibrary_edition: ${{ inputs.openlibrary_edition }}
+      openlibrary_subject: ${{ inputs.openlibrary_subject }}
+      openlibrary_work: ${{ inputs.openlibrary_work }}
+      page-progression: ${{ inputs.page-progression }}
+      possible-copyright-status: ${{ inputs.possible-copyright-status }}
+      ppi: ${{ inputs.ppi }}
+      publisher: ${{ inputs.publisher }}
+      related-external-id: ${{ inputs.related-external-id }}
+      rights: ${{ inputs.rights }}
+      scandate: ${{ inputs.scandate }}
+      scanner: ${{ inputs.scanner }}
+      size: ${{ inputs.size }}
+      sound: ${{ inputs.sound }}
+      source: ${{ inputs.source }}
+      sponsor: ${{ inputs.sponsor }}
+      subject: ${{ inputs.subject }}
+      title: ${{ inputs.title }}
+      title-alt-script: ${{ inputs.title-alt-script }}
+      volume: ${{ inputs.volume }}
+      year: ${{ inputs.year }}
