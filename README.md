@@ -25,7 +25,8 @@
 # Internet Archive Upload Action
 
 - This action was originally forked from [palewire/internet-archive-upload](https://github.com/palewire/internet-archive-upload).
-- It allows you to upload files or directories to the Internet Archive (archive.org) and set metadata for the uploaded items. The action supports uploading single files, multiple files, or entire directories, and it can handle various metadata fields to describe the content being uploaded.
+- It allows you to upload files or directories to the Internet Archive (archive.org) and set metadata for the uploaded items.
+- The action supports uploading single files, multiple files, or entire directories, and it can handle various metadata fields to describe the content being uploaded.
 
 ## Inputs: _(Required)_
 
