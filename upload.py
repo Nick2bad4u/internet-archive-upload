@@ -12,17 +12,6 @@ def main():
     secret_key = os.getenv("secret-key")
     identifier = os.getenv("identifier")
     files = os.getenv("files")
-    if not files:
-        raise ValueError(
-            "The 'files' environment variable is empty. Please provide valid file paths."
-        )
-    # Validate file paths
-    file_paths = [file.strip() for file in files.split(",") if file.strip()]
-    if not all(os.path.isfile(file_path) for file_path in file_paths):
-        raise ValueError(
-            "One or more file paths in the 'files' environment variable are invalid."
-        )
-    files = file_paths
 
     # Metadata fields (add more as needed)
     metadata_fields = [
