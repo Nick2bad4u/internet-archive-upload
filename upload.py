@@ -12,6 +12,13 @@ def main():
     secret_key = os.getenv("secret-key")
     identifier = os.getenv("identifier")
     files = os.getenv("files")
+    if not files:
+        raise ValueError("The 'files' environment variable is empty. Please provide valid file paths.")
+    # Validate file paths
+    file_paths = [file.strip() for file in files.split(",") if file.strip()]
+    if not all(os.path.isfile(file_path) for file_path in file_paths):
+        raise ValueError("One or more file paths in the 'files' environment variable are invalid.")
+    files = file_paths
 
     # Metadata fields (add more as needed)
     metadata_fields = [
@@ -64,9 +71,11 @@ def main():
         "volume",
         "year",
     ]
+    # Cache environment variables
+    env_vars = {field: os.getenv(field) for field in metadata_fields}
+
     metadata = {}
-    for field in metadata_fields:
-        value = os.getenv(field)
+    for field, value in env_vars.items():
         if value:
             # For list fields (subject, creator, contributor, coverage, openlibrary_author, openlibrary_subject, related-external-id, isbn, issn, lccn, oclc-id, language), split on comma
             if field in [
@@ -102,12 +111,20 @@ def main():
     # Remove None metadata to avoid passing empty dict
     if not metadata:
         kwargs.pop("metadata")
-    _upload(identifier, **kwargs)
+    try:
+        _upload(identifier, **kwargs)
+    except Exception as e:
+        logger.error(f"Upload failed after retries: {e}")
+        raise
 
 
-@retry(tries=5, delay=30, backoff=2)
+@retry(tries=10, delay=30, backoff=2)
 def _upload(identifier: str, **kwargs):
-    internetarchive.upload(identifier, **kwargs)
+    try:
+        internetarchive.upload(identifier, **kwargs)
+    except Exception as e:
+        logging.error(f"Error during upload: {e}")
+        raise
 
 
 if __name__ == "__main__":
