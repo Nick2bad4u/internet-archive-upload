@@ -4,7 +4,7 @@
 [![Black](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/black-formatter.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/black-formatter.yml) 🎨
 [![CodeQL](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/codeql.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/codeql.yml) 🔍
 [![Dependabot](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependabot/dependabot-updates) 🤖
-[![Dep Review](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml) 🧩
+[![Dep Review](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml/badge.svg?event=pull_request)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml) 🧩
 [![Jekyll Deploy](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/jekyll-gh-pages.yml) 🚀
 [![DevSkim](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/devskim.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/devskim.yml) 🧪
 [![GitLeaks](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/gitleaks.yml) 🕵️
