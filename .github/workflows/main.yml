@@ -1,4 +1,4 @@
-name: Upload Windows Distributables to Archive.org
+name: Upload Releases to Archive.org
 
 on:
   workflow_dispatch:
