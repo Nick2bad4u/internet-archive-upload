@@ -5,7 +5,7 @@ on:
   push:
 
 concurrency:
-  group: IAWINDOWS-${{ github.ref }}
+  group: IA-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
         with:
           access-key: ${{ secrets.IA_ACCESS_KEY }}
           secret-key: ${{ secrets.IA_SECRET_KEY }}
-          identifier: Github-Action-IA-Archiver-${{ steps.download_msi.outputs.tag_name }}
+          identifier: Github-Action-IA-Archiver-${{ steps.download_zip.outputs.tag_name }}
           files: ./
         continue-on-error: true
         env:

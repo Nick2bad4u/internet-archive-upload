@@ -4,7 +4,7 @@ description: Automatically save files with the Internet Archive w/ Metadata supp
 
 branding:
   icon: upload-cloud
-  color: white
+  color: green
 
 inputs:
   access-key:
@@ -167,11 +167,12 @@ inputs:
 runs:
   using: "composite"
   steps:
+
   - id: setup-python
     name: Setup Python
     uses: actions/setup-python@v5
     with:
-      python-version: 3.9
+      python-version: 3.13
 
   - id: install-deps
     name: Install Python dependencies
