@@ -20,6 +20,7 @@
 [![Typos](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/typos.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/typos.yml) ✏️
 [![Summary](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/summary.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/summary.yml) 📝
 [![TruffleHog](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/trufflehog.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/trufflehog.yml) 🐗
+[![Upload Releases to Archive.org](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/main.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/main.yml) 🗄️
 
 
 # Internet Archive Upload Action
