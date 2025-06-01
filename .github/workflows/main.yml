@@ -32,7 +32,7 @@ jobs:
         with:
           access-key: ${{ secrets.IA_ACCESS_KEY }}
           secret-key: ${{ secrets.IA_SECRET_KEY }}
-          identifier: ${{ steps.download_msi.outputs.tag_name }}
+          identifier: Github-Action-IA-Archiver-${{ steps.download_msi.outputs.tag_name }}
           files: ./
         continue-on-error: true
         env:
