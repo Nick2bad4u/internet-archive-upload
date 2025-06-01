@@ -2,6 +2,7 @@ name: Upload Windows Distributables to Archive.org
 
 on:
   workflow_dispatch:
+  push:
 
 concurrency:
   group: IAWINDOWS-${{ github.ref }}
@@ -16,7 +17,7 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: Download Windows release assets (msi-)
+      - name: Download release tarball + zip
         id: download_zip
         uses: robinraju/release-downloader@daf26c55d821e836577a15f77d86ddc078948b05 # v1.12
         with:
@@ -26,12 +27,12 @@ jobs:
           zipBall: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Windows distributables to archive.org
+      - name: Upload tarball + zip to archive.org
         uses: Nick2bad4u/internet-archive-upload@ecf1bdea26a78610d394e48c4162759fc00c1308 # v1.4
         with:
           access-key: ${{ secrets.IA_ACCESS_KEY }}
           secret-key: ${{ secrets.IA_SECRET_KEY }}
-          identifier: github-action-archive-org-uploader-${{ steps.download_msi.outputs.tag_name }}
+          identifier: ${{ steps.download_msi.outputs.tag_name }}
           files: ./
         continue-on-error: true
         env:
