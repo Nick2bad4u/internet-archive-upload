@@ -20,8 +20,10 @@ jobs:
         id: download_zip
         uses: robinraju/release-downloader@daf26c55d821e836577a15f77d86ddc078948b05 # v1.12
         with:
+          repo: Nick2bad4u/internet-archive-upload
           latest: true
-          fileName: "*.zip"
+          tarBall: true
+          zipBall: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download Windows release assets (msi-)
