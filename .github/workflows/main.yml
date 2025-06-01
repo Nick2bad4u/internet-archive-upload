@@ -1,0 +1,44 @@
+name: Upload Windows Distributables to Archive.org
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: IAWINDOWS-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  upload-windows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
+        with:
+          egress-policy: audit
+
+      - name: Download Windows release assets (msi-)
+        id: download_zip
+        uses: robinraju/release-downloader@daf26c55d821e836577a15f77d86ddc078948b05 # v1.12
+        with:
+          latest: true
+          fileName: "*.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download Windows release assets (msi-)
+        id: download_tar_gz
+        uses: robinraju/release-downloader@daf26c55d821e836577a15f77d86ddc078948b05 # v1.12
+        with:
+          latest: true
+          fileName: "*.tar.gz"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Windows distributables to archive.org
+        uses: Nick2bad4u/internet-archive-upload@ecf1bdea26a78610d394e48c4162759fc00c1308 # v1.4
+        with:
+          access-key: ${{ secrets.IA_ACCESS_KEY }}
+          secret-key: ${{ secrets.IA_SECRET_KEY }}
+          identifier: github-action-archive-org-uploader-${{ steps.download_msi.outputs.tag_name }}
+          files: ./
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
