@@ -2,7 +2,8 @@ name: Upload Releases to Archive.org
 
 on:
   workflow_dispatch:
-  push:
+  release:
+    types: [published]
 
 concurrency:
   group: IA-${{ github.ref }}
