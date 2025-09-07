@@ -150,12 +150,12 @@
         },
         "internetarchive": {
             "hashes": [
-                "sha256:692d3601c52197b5604c3bc9ddbc0119f7ac53987329a2ec81d80d7a56cb8e8a",
-                "sha256:d267cf1111f225657a67b50ebb6ce53a4c5270225410aa110383c0d1aea9becb"
+                "sha256:0564a82206ad8df78d00b30aa1477d5214c411e89280099cc6b24240fbe06894",
+                "sha256:e49b1681222ca9b4ff6db333b79c60ac3a1f16f0a87216431b4208adac8e5aaa"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==5.5.0"
+            "version": "==5.5.1"
         },
         "jsonpatch": {
             "hashes": [
