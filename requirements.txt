@@ -1,2 +1,2 @@
-internetarchive==5.5.1
+internetarchive==5.7.1
 retry==0.9.2
