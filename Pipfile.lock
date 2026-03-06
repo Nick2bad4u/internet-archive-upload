@@ -21,7 +21,6 @@
                 "sha256:027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa",
                 "sha256:e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7"
             ],
-            "index": "pypi",
             "markers": "python_version >= '3.7'",
             "version": "==2026.2.25"
         },
@@ -180,18 +179,17 @@
                 "sha256:49fef1ae6440c182052f407c8d34a68f72efc36db9ca90dc0113398f2fdde8bb",
                 "sha256:5a1f80bf1daa489495071efbb095d75a634cf28a8bc299581244063b53176151"
             ],
-            "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==8.7.1"
         },
         "internetarchive": {
             "hashes": [
-                "sha256:f35e545c4925e1fc5f37bd83e59b8b72f79645129d0a32772a6d25fb5252d92a",
-                "sha256:fcfcb729f4d7ffdad42aaed22247ac42e21fe2d99c122646870844cbbd981559"
+                "sha256:0dff14d51bafa3da587f32a8cb6478327e20c2d040a61fbfb4ad30d592062cc2",
+                "sha256:2f86eed71e11ad0c8f7ac3a339a2e0d0ee8316151be1257950df5e472ff62d8b"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==5.7.1"
+            "version": "==5.8.0"
         },
         "jsonpatch": {
             "hashes": [
@@ -246,7 +244,6 @@
                 "sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb",
                 "sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf"
             ],
-            "index": "pypi",
             "markers": "python_version >= '3.7'",
             "version": "==4.67.3"
         },
@@ -255,7 +252,6 @@
                 "sha256:1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed",
                 "sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4"
             ],
-            "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==2.6.3"
         },
