@@ -8,33 +8,32 @@
 # - Grouping updates by ecosystem with specific patterns for version updates.
 
 version: 2
+enable-beta-ecosystems: true
+
+multi-ecosystem-groups:
+    dependabot-all:
+        schedule:
+            interval: "monthly"
+
 updates:
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: monthly
-    allow:
-      # Allow both direct and indirect updates for all packages
-      - dependency-type: "all"
-    labels:
-      - "github-actions"
-    groups:
-      github-actions:
-        applies-to: version-updates
-        patterns:
+    - package-ecosystem: github-actions
+      directory: /
+      allow:
+          # Allow both direct and indirect updates for all packages
+          - dependency-type: "all"
+      labels:
+          - "github-actions"
+      multi-ecosystem-group: dependabot-all
+      patterns:
           - "*"
 
-  - package-ecosystem: pip
-    directory: /
-    schedule:
-      interval: monthly
-    allow:
-      # Allow both direct and indirect updates for all packages
-      - dependency-type: "all"
-    labels:
-      - "pip"
-    groups:
-      pip:
-        applies-to: version-updates
-        patterns:
+    - package-ecosystem: pip
+      directory: /
+      allow:
+          # Allow both direct and indirect updates for all packages
+          - dependency-type: "all"
+      labels:
+          - "pip"
+      multi-ecosystem-group: dependabot-all
+      patterns:
           - "*"
