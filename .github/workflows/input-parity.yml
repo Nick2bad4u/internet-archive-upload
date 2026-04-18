@@ -1,0 +1,29 @@
+name: Input Parity Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  input-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install checker dependencies
+        run: python -m pip install pyyaml
+
+      - name: Validate action input parity
+        run: python scripts/check_input_parity.py

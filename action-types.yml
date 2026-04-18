@@ -1,0 +1,178 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/typesafegithub/github-actions-typing/main/github-actions-typing.schema.json
+
+inputs:
+  access-key:
+    type: string
+  secret-key:
+    type: string
+  identifier:
+    type: string
+  files:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  log-level:
+    type: enum
+    name: LogLevel
+    allowed-values:
+      - DEBUG
+      - INFO
+      - WARNING
+      - ERROR
+      - CRITICAL
+  adaptive_ocr:
+    type: boolean
+  aspect_ratio:
+    type: string
+  betterpdf:
+    type: boolean
+  bookreader-defaults:
+    type: string
+  bwocr:
+    type: string
+  call_number:
+    type: string
+  ccnum:
+    type: string
+  closed_captioning:
+    type: enum
+    name: ClosedCaptioning
+    allowed-values:
+      - yes
+      - no
+  color:
+    type: enum
+    name: ColorMode
+    allowed-values:
+      - color
+      - black and white
+  condition:
+    type: string
+  condition-visual:
+    type: string
+  contributor:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  coverage:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  creator:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  creator-alt-script:
+    type: string
+  date:
+    type: string
+  description:
+    type: string
+  external-identifier:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  fixed-ppi:
+    type: integer
+  isbn:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  issn:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  lccn:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  language:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  licenseurl:
+    type: string
+  notes:
+    type: string
+  oclc-id:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  openlibrary:
+    type: string
+  openlibrary_author:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  openlibrary_edition:
+    type: string
+  openlibrary_subject:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  openlibrary_work:
+    type: string
+  page-progression:
+    type: enum
+    name: PageProgression
+    allowed-values:
+      - lr
+      - rl
+  possible-copyright-status:
+    type: string
+  ppi:
+    type: integer
+  publisher:
+    type: string
+  related-external-id:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  rights:
+    type: string
+  scandate:
+    type: string
+  scanner:
+    type: string
+  size:
+    type: float
+  sound:
+    type: enum
+    name: SoundMode
+    allowed-values:
+      - sound
+      - silent
+  source:
+    type: string
+  sponsor:
+    type: string
+  subject:
+    type: list
+    separator: ","
+    list-item:
+      type: string
+  title:
+    type: string
+  title-alt-script:
+    type: string
+  volume:
+    type: string
+  year:
+    type: integer
+
+outputs:
+  item-url:
+    type: string

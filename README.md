@@ -1,67 +1,6 @@
-[![ActionLint](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/ActionLint.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/ActionLint.yml) 🛠️
-[![Rebase](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/rebase.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/rebase.yml) 🔄
-[![Bandit](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/Bandit.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/Bandit.yml) 🐍
-[![Black](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/black-formatter.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/black-formatter.yml) 🎨
-[![CodeQL](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/codeql.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/codeql.yml) 🔍
-[![Dependabot](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependabot/dependabot-updates) 🤖
-[![Dep Review](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml/badge.svg?event=pull_request)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/dependency-review.yml) 🧩
-[![Jekyll Deploy](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/jekyll-gh-pages.yml) 🚀
-[![DevSkim](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/devskim.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/devskim.yml) 🧪
-[![GitLeaks](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/gitleaks.yml) 🕵️
-[![Sitemap](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/sitemap.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/sitemap.yml) 🗺️
-[![Greetings](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/greetings.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/greetings.yml) 👋
-[![Stale](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/stale.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/stale.yml) 💤
-[![MegaLinter](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/mega-linter.yml) 🦾
-[![Stats](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/repo-stats.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/repo-stats.yml) 📊
-[![SecDevOps](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/security-devops.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/security-devops.yml) 🛡️
-[![OSSAR](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/ossar.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/ossar.yml) 🧬
-[![PSSecret](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/pssecret-scanner.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/pssecret-scanner.yml) 🔑
-[![Scorecard](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/scorecards.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/scorecards.yml) 🏅
-[![Typos](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/typos.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/typos.yml) ✏️
-[![Summary](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/summary.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/summary.yml) 📝
-[![TruffleHog](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/trufflehog.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/trufflehog.yml) 🐗
-[![Upload Releases to Archive.org](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/internet-archive-upload.yml/badge.svg)](https://github.com/Nick2bad4u/internet-archive-upload/actions/workflows/internet-archive-upload.yml) 🗄️
-
-<p align="center">
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/pulls" title="View or submit pull requests">
-    <img alt="Badge: PRs Welcome (green, flat-square style)" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&logo=github" title="PRs Welcome">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/blob/master/CONTRIBUTING.md" title="Read the contributing guidelines">
-    <img alt="Badge: Contributions Accepted (dark green, flat-square style)" src="https://img.shields.io/badge/Contributions-Accepted-darkgreen?style=flat-square&logo=contributorcovenant" title="Contributions Accepted">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/graphs/contributors" title="View project contributors">
-    <img alt="Badge: Contributors (dynamic count, flat-square style)" src="https://img.shields.io/github/contributors/nick2bad4u/internet-archive-upload?style=flat-square&logo=contributorcovenant" title="Contributors">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/stargazers" title="See who starred this repo">
-    <img alt="Badge: GitHub Stars (dynamic count, flat-square style)" src="https://img.shields.io/github/stars/nick2bad4u/internet-archive-upload?style=flat-square&logo=polestar" title="GitHub Stars">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/issues" title="View open issues">
-    <img alt="Badge: GitHub Issues (dynamic count, flat-square style)" src="https://img.shields.io/github/issues/nick2bad4u/internet-archive-upload?style=flat-square&logo=wwise" title="GitHub Issues">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload/commits" title="View recent commits">
-    <img alt="Badge: Last Commit (dynamic date, flat-square style)" src="https://img.shields.io/github/last-commit/nick2bad4u/internet-archive-upload?style=flat-square&logo=commonworkflowlanguage" title="Last Commit">
-  </a>
-  <a href="https://github.com/nick2bad4u/internet-archive-upload" title="GitHub Drama main repository">
-    <img alt="Badge: Repository Views (dynamic count, flat style)" src="https://views.igorkowalczyk.dev/api/badge/internet-archive-upload-Modern?style=flat" title="Repository Views">
-  </a>
-  <a href="https://github.com/Nick2bad4u/internet-archive-upload/blob/main/LICENSE.md" title="View project license">
-    <img alt="Badge: License (UnLicense, flat-square style)" src="https://img.shields.io/github/license/nick2bad4u/internet-archive-upload?style=flat-square&logo=unlicense" title="License: UnLicense">
-  </a>
-  <a href="https://prettier.io/" title="Code Style: Prettier">
-    <img alt="Badge: Code Style (Prettier, pink, flat-square style)" src="https://img.shields.io/badge/code%20style-prettier-ff69b4.svg" title="Code Style: Prettier">
-  </a>
-  <a href="https://github.com/Nick2bad4u/internet-archive-upload/blob/main/README.md" title="Made with Markdown">
-    <img alt="Badge: Made with (Markdown, blue, flat-square style)" src="https://img.shields.io/badge/made%20with-Markdown-blue" title="Made with Markdown">
-  </a>
-  <a href="https://github.com/Nick2bad4u/internet-archive-upload/forks" title="Forks">
-    <img alt="Badge: Forks (dynamic count, flat-square style)" src="https://img.shields.io/github/forks/nick2bad4u/internet-archive-upload?style=flat-square&logo=greasyfork" title="Forks">
-  </a>
-  <a href="https://nick2bad4u.github.io/internet-archive-upload/" title="GitHub Pages Status">
-    <img alt="Badge: GitHub Pages Status (dynamic, flat-square style)" src="https://img.shields.io/website?url=https%3A%2F%2Fnick2bad4u.github.io%2Finternet-archive-upload%2F&up_message=Online&down_message=Offline&style=flat-square&logo=github&label=Github%20Pages&cacheSeconds=6000&link=https%3A%2F%2Fnick2bad4u.github.io%2Finternet-archive-upload%2F" title="GitHub Pages Status">
-  </a>
-</p>
-
 # Internet Archive Upload Action
+
+[![latest GitHub release.](https://flat.badgen.net/github/release/Nick2bad4u/internet-archive-upload?color=cyan)](https://github.com/Nick2bad4u/internet-archive-upload/releases) [![GitHub stars.](https://flat.badgen.net/github/stars/Nick2bad4u/internet-archive-upload?color=yellow)](https://github.com/Nick2bad4u/internet-archive-upload/stargazers) [![GitHub forks.](https://flat.badgen.net/github/forks/Nick2bad4u/internet-archive-upload?color=green)](https://github.com/Nick2bad4u/internet-archive-upload/forks) [![GitHub open issues.](https://flat.badgen.net/github/open-issues/Nick2bad4u/internet-archive-upload?color=red)](https://github.com/Nick2bad4u/internet-archive-upload/issues)
 
 - This action was originally forked from [palewire/internet-archive-upload](https://github.com/palewire/internet-archive-upload).
 - It allows you to upload files or directories to the Internet Archive (archive.org) and set metadata for the uploaded items.
@@ -77,7 +16,19 @@
 | `access-key` | Your archive.org access key                                                 |
 | `secret-key` | Your archive.org secret key                                                 |
 | `identifier` | The unique identifier of the archive.org item where the file will be stored |
-| `files`      | The file or folder path inside the action's filesystem to upload            |
+| `files`      | File or folder path(s) to upload. Supports a single path, a glob pattern, or a comma-separated list of paths |
+
+## Additional Non-Metadata Optional Inputs
+
+| Input Name | Description |
+| --- | --- |
+| `log-level` | Log verbosity level for the uploader. Allowed values: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`. Defaults to `INFO`. |
+
+## Outputs
+
+| Output Name | Description |
+| --- | --- |
+| `item-url` | Archive.org details page URL for the target identifier, e.g. `https://archive.org/details/<identifier>` |
 
 ### Supported Metadata Fields Inputs: _(Optional)_
 
@@ -95,7 +46,7 @@
 | `call_number`               | Contributing library's local call number                                       | 6675707, NC 285.1 P9287m                                                                                     |
 | `ccnum`                     | Closed Captioning Number                                                       | cc5                                                                                                          |
 | `closed_captioning`         | Indicates whether item contains closed captioning files (yes/no)               | yes                                                                                                          |
-| `color`                     | Indicates whether media is in color or black and white                         | color                                                                                                        |
+| `color`                     | Indicates whether media is in color or black and white (`color` or `black and white`) | color                                                                                                   |
 | `condition`                 | Condition of media (e.g. Good, Fair, Poor)                                     | Good                                                                                                         |
 | `condition-visual`          | Condition of artwork or printed materials                                      | Good                                                                                                         |
 | `contributor`               | Comma-separated list of contributors                                           | Robarts - University of Toronto                                                                              |
@@ -127,7 +78,7 @@
 | `scandate`                  | Date and time the media was captured                                           | 20170329201345                                                                                               |
 | `scanner`                   | Machinery used to digitize or collect the media                                | scribe2.nj.archive.org                                                                                       |
 | `size`                      | Size of physical item digitized                                                | 10.0                                                                                                         |
-| `sound`                     | Indicates whether media has sound or is silent                                 | sound                                                                                                        |
+| `sound`                     | Indicates whether media has sound or is silent (`sound` or `silent`)           | sound                                                                                                        |
 | `source`                    | Source of media                                                                | folio, Comcast Cable, CD                                                                                     |
 | `sponsor`                   | The person or organization that funded the digitization or collection          | Kahle-Austin Foundation                                                                                      |
 | `subject`                   | Comma-separated list of subjects/topics for the item                           | France                                                                                                       |
@@ -137,6 +88,23 @@
 | `year`                      | Year of publication (deprecated, use date)                                     | 1996                                                                                                         |
 
 ## Usage Examples
+
+> [!TIP]
+> For supply-chain security, pin this action to a full commit SHA instead of a mutable tag such as `latest`.
+> The latest SHA for this repo is:
+> ```
+> 1cdb640f1bd8b06c29ef86a7d323d8c2e51eda89
+> ```
+> Use it as: `nick2bad4u/internet-archive-upload@1cdb640f1bd8b06c29ef86a7d323d8c2e51eda89`
+
+> [!NOTE]
+> Set `log-level: DEBUG` in action inputs for verbose troubleshooting output (or override via `IA_LOG_LEVEL`).
+
+> [!IMPORTANT]
+> Best practice for this action is to rely on the step exit code for success/failure. It intentionally does not expose status/message outputs, because those are redundant with normal GitHub Actions failure handling and are less reliable when a step fails fast.
+
+> [!NOTE]
+> The action does expose one useful output: `item-url`, which is the expected Internet Archive details URL derived from the target identifier.
 
 ### Upload a single file with metadata
 
@@ -150,10 +118,11 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Upload file to archive.org
-        uses: nick2bad4u/internet-archive-upload@latest
+        id: ia_upload
+        uses: nick2bad4u/internet-archive-upload@1cdb640f1bd8b06c29ef86a7d323d8c2e51eda89
         with:
             # Required fields
             access-key: ${{ secrets.IA_ACCESS_KEY }}
@@ -167,7 +136,10 @@ jobs:
             subject: "example,archive,upload"
             date: "2025-05-29"
             language: "English"
-            betterpdf: "true"
+            betterpdf: true
+
+      - name: Print uploaded item URL
+        run: echo "Item URL: ${{ steps.ia_upload.outputs.item-url }}"
 ```
 
 ### Upload a directory of files
@@ -182,10 +154,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Upload directory to archive.org
-        uses: nick2bad4u/internet-archive-upload@latest
+        uses: nick2bad4u/internet-archive-upload@1cdb640f1bd8b06c29ef86a7d323d8c2e51eda89
         with:
           # Required fields
           access-key: ${{ secrets.IA_ACCESS_KEY }}
@@ -199,7 +171,7 @@ jobs:
           subject: "example,archive,upload"
           date: "2025-05-29"
           language: "English"
-          betterpdf: "true"
+          betterpdf: true
 ```
 
 ### Example of a real-world usage in a GitHub Actions workflow
@@ -234,7 +206,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload tarball + zip to archive.org
-        uses: Nick2bad4u/internet-archive-upload@ecf1bdea26a78610d394e48c4162759fc00c1308 # v1.4
+        uses: Nick2bad4u/internet-archive-upload@1cdb640f1bd8b06c29ef86a7d323d8c2e51eda89 # main
         with:
           access-key: ${{ secrets.IA_ACCESS_KEY }}
           secret-key: ${{ secrets.IA_SECRET_KEY }}
@@ -261,23 +233,3 @@ If you want to contribute to this project, please fork the repository and submit
 ## Acknowledgements
 
 This action was originally created by [**Ben Welsh**](https://github.com/palewire/internet-archive-upload "PaleWire Internet Archive Uploader Repo"). It has been forked and maintained by [Nick2bad4u](https://github.com/nick2bad4u/internet-archive-upload "Nick2bad4u's Profile").
-
-<div align="center">
-    <img
-      src="https://github.com/Nick2bad4u/Nick2bad4u/blob/main/assets/GitHubProfileLines.gif?raw=true"
-      alt="Repository Banner Line Animation"
-      width="100%"
-    />
-</div>
-
-# Repo Statistics
-
-![Repo Beats](https://repobeats.axiom.co/api/embed/c1271c0a75ae77ab95116cfe318e5b9831f4182d.svg "Repobeats analytics image")
-
-<div align="center">
-    <img
-      src="https://github.com/Nick2bad4u/internet-archive-upload/raw/refs/heads/main/metrics.repository.svg"
-      alt="Repo Metrics"
-      width="100%"
-    />
-</div>

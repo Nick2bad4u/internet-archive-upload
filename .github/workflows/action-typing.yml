@@ -1,0 +1,21 @@
+name: Validate Action Typings
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-action-typing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate action-types.yml against action.yml
+        uses: typesafegithub/github-actions-typing@v2

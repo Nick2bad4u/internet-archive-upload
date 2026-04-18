@@ -4,11 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-retry = "*"
-internetarchive = "*"
+internetarchive = "==5.8.0"
 
 [dev-packages]
-pre-commit = "*"
+pre-commit = "==4.5.1"
 
 [requires]
-python_version = "3.9"
+python_version = "3.13"

@@ -17,8 +17,12 @@ inputs:
     description: The unique identifier of the archive.org item where the file will be stored
     required: true
   files:
-    description: The file or folder path inside the action's filesystem to upload
+    description: File or folder path(s) to upload (single path, glob pattern, or
+      comma-separated list)
     required: true
+  log-level:
+    description: Log verbosity level for the uploader (e.g. INFO, DEBUG, WARNING)
+    required: false
   adaptive_ocr:
     description: Allows deriver to skip a page that would otherwise disrupt OCR
     required: false
@@ -26,7 +30,8 @@ inputs:
     description: Ratio of the pixel width and height of a video stream (e.g. 4:3, 16:9)
     required: false
   betterpdf:
-    description: Indicates that the derive module should create a higher quality PDF derivative
+    description: Indicates that the derive module should create a higher quality PDF
+      derivative
     required: false
   bookreader-defaults:
     description: Bookreader display mode (e.g. mode/1up, mode/2up, mode/thumb)
@@ -164,75 +169,37 @@ inputs:
     description: Year of publication (deprecated, use date)
     required: false
 
+outputs:
+  item-url:
+    description: Archive.org details page URL for the target identifier
+    value: ${{ format('https://archive.org/details/{0}', inputs.identifier) }}
+
 runs:
   using: "composite"
   steps:
 
-  - id: setup-python
-    name: Setup Python
-    uses: actions/setup-python@v6
-    with:
-      python-version: 3.13
+    - id: setup-python
+      name: Setup Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: 3.13
+        check-latest: true
 
-  - id: install-deps
-    name: Install Python dependencies
-    run: pip install internetarchive retry
-    shell: bash
+    - id: install-deps
+      name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --requirement "${{ github.action_path }}/requirements.txt"
+      shell: bash --noprofile --norc -euo pipefail {0}
 
-  - id: upload-files
-    name: Upload files
-    run: python ${{ github.action_path }}/upload.py
-    shell: bash
-    env:
-      access-key: ${{ inputs.access-key }}
-      secret-key: ${{ inputs.secret-key }}
-      identifier: ${{ inputs.identifier }}
-      files: ${{ inputs.files }}
-      adaptive_ocr: ${{ inputs.adaptive_ocr }}
-      aspect_ratio: ${{ inputs.aspect_ratio }}
-      betterpdf: ${{ inputs.betterpdf }}
-      bookreader-defaults: ${{ inputs.bookreader-defaults }}
-      bwocr: ${{ inputs.bwocr }}
-      call_number: ${{ inputs.call_number }}
-      ccnum: ${{ inputs.ccnum }}
-      closed_captioning: ${{ inputs.closed_captioning }}
-      color: ${{ inputs.color }}
-      condition: ${{ inputs.condition }}
-      condition-visual: ${{ inputs.condition-visual }}
-      contributor: ${{ inputs.contributor }}
-      coverage: ${{ inputs.coverage }}
-      creator: ${{ inputs.creator }}
-      creator-alt-script: ${{ inputs.creator-alt-script }}
-      date: ${{ inputs.date }}
-      description: ${{ inputs.description }}
-      external-identifier: ${{ inputs.external-identifier }}
-      fixed-ppi: ${{ inputs.fixed-ppi }}
-      isbn: ${{ inputs.isbn }}
-      issn: ${{ inputs.issn }}
-      lccn: ${{ inputs.lccn }}
-      language: ${{ inputs.language }}
-      licenseurl: ${{ inputs.licenseurl }}
-      notes: ${{ inputs.notes }}
-      oclc-id: ${{ inputs.oclc-id }}
-      openlibrary: ${{ inputs.openlibrary }}
-      openlibrary_author: ${{ inputs.openlibrary_author }}
-      openlibrary_edition: ${{ inputs.openlibrary_edition }}
-      openlibrary_subject: ${{ inputs.openlibrary_subject }}
-      openlibrary_work: ${{ inputs.openlibrary_work }}
-      page-progression: ${{ inputs.page-progression }}
-      possible-copyright-status: ${{ inputs.possible-copyright-status }}
-      ppi: ${{ inputs.ppi }}
-      publisher: ${{ inputs.publisher }}
-      related-external-id: ${{ inputs.related-external-id }}
-      rights: ${{ inputs.rights }}
-      scandate: ${{ inputs.scandate }}
-      scanner: ${{ inputs.scanner }}
-      size: ${{ inputs.size }}
-      sound: ${{ inputs.sound }}
-      source: ${{ inputs.source }}
-      sponsor: ${{ inputs.sponsor }}
-      subject: ${{ inputs.subject }}
-      title: ${{ inputs.title }}
-      title-alt-script: ${{ inputs.title-alt-script }}
-      volume: ${{ inputs.volume }}
-      year: ${{ inputs.year }}
+    - id: upload-files
+      name: Upload files
+      run: python "${{ github.action_path }}/upload.py"
+      shell: bash --noprofile --norc -euo pipefail {0}
+      env:
+        IA_ACCESS_KEY: ${{ inputs.access-key }}
+        IA_SECRET_KEY: ${{ inputs.secret-key }}
+        IA_IDENTIFIER: ${{ inputs.identifier }}
+        IA_FILES: ${{ inputs.files }}
+        IA_LOG_LEVEL: ${{ inputs.log-level }}
+        IA_INPUTS_JSON: ${{ toJSON(inputs) }}
